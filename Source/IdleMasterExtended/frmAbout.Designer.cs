@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace IdleMasterExtended
 {
-    partial class frmAbout
+    partial class FrmAbout
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace IdleMasterExtended
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbout));
             this.btnOK = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@ namespace IdleMasterExtended
             this.btnOK.TabIndex = 0;
             this.btnOK.Text = "&OK";
             this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnOK.Click += new System.EventHandler(this.BtnOK_Click);
             // 
             // pictureBox1
             // 
@@ -79,7 +79,7 @@ namespace IdleMasterExtended
             this.linkLabelVersion.TabIndex = 4;
             this.linkLabelVersion.TabStop = true;
             this.linkLabelVersion.Text = "Idle Master Extended";
-            this.linkLabelVersion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelVersion_LinkClicked);
+            this.linkLabelVersion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelVersion_LinkClicked);
             // 
             // frmAbout
             // 
@@ -97,7 +97,7 @@ namespace IdleMasterExtended
             this.Name = "frmAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About Idle Master Extended";
-            this.Load += new System.EventHandler(this.frmAbout_Load);
+            this.Load += new System.EventHandler(this.FrmAbout_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

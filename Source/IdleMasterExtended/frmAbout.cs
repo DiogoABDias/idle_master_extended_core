@@ -1,62 +1,50 @@
 ﻿using System;
-using System.Deployment.Application;
+using System.Diagnostics;
+
+// TODO Although ClickOnce is supported on .NET 5+, apps do not have access to the System.Deployment.Application namespace. For more details see https://github.com/dotnet/deployment-tools/issues/27 and https://github.com/dotnet/deployment-tools/issues/53.
 using System.Reflection;
-using System.Text;
 using System.Windows.Forms;
 
-namespace IdleMasterExtended
+namespace IdleMasterExtended;
+
+public partial class FrmAbout : Form
 {
-    public partial class frmAbout : Form
+    public FrmAbout() => InitializeComponent();
+
+    private void BtnOK_Click(object sender, EventArgs e) => Close();
+
+    private void FrmAbout_Load(object sender, EventArgs e)
     {
-        public frmAbout()
+        SetLocalization();
+        SetTheme();
+        SetVersion();
+    }
+
+    private void SetLocalization() => btnOK.Text = localization.strings.ok;
+
+    private void SetTheme()
+    {
+        Properties.Settings settings = Properties.Settings.Default;
+        bool customTheme = settings.customTheme;
+
+        if (customTheme)
         {
-            InitializeComponent();
-        }
+            BackColor = settings.colorBgd;
+            ForeColor = settings.colorTxt;
 
-        private void btnOK_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+            btnOK.FlatStyle = FlatStyle.Flat;
+            btnOK.BackColor = BackColor;
+            btnOK.ForeColor = ForeColor;
 
-        private void frmAbout_Load(object sender, EventArgs e)
-        {
-            SetLocalization();
-            SetTheme();
-            SetVersion();
-        }
-
-        private void SetLocalization()
-        {
-            btnOK.Text = localization.strings.ok;
-        }
-
-        private void SetTheme()
-        {
-            var settings = Properties.Settings.Default;
-            var customTheme = settings.customTheme;
-
-            if (customTheme)
-            {
-                this.BackColor = settings.colorBgd;
-                this.ForeColor = settings.colorTxt;
-
-                btnOK.FlatStyle = FlatStyle.Flat;
-                btnOK.BackColor = this.BackColor;
-                btnOK.ForeColor = this.ForeColor;
-
-                linkLabelVersion.LinkColor = this.ForeColor;
-            }
-        }
-
-        private void SetVersion()
-        {
-            var version = Assembly.GetExecutingAssembly().GetName().Version;
-            linkLabelVersion.Text = string.Format("Idle Master Extended v{0}.{1}.{2}", version.Major, version.Minor, version.Build);
-        }
-
-        private void linkLabelVersion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/JonasNilson/idle_master_extended/releases");
+            linkLabelVersion.LinkColor = ForeColor;
         }
     }
+
+    private void SetVersion()
+    {
+        Version version = Assembly.GetExecutingAssembly().GetName().Version;
+        linkLabelVersion.Text = string.Format("Idle Master Extended v{0}.{1}.{2}", version.Major, version.Minor, version.Build);
+    }
+
+    private void LinkLabelVersion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => Process.Start("https://github.com/JonasNilson/idle_master_extended/releases");
 }

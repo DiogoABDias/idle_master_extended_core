@@ -71,7 +71,7 @@ namespace IdleMasterExtended
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // txtAppid
             // 
@@ -98,7 +98,7 @@ namespace IdleMasterExtended
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "&Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnRemove
             // 
@@ -108,7 +108,7 @@ namespace IdleMasterExtended
             this.btnRemove.Size = new System.Drawing.Size(28, 28);
             this.btnRemove.TabIndex = 2;
             this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.btnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
             // frmWhitelist
             // 
@@ -127,7 +127,7 @@ namespace IdleMasterExtended
             this.Name = "frmWhitelist";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Manage Whitelist";
-            this.Load += new System.EventHandler(this.frmWhitelist_Load);
+            this.Load += new System.EventHandler(this.FrmWhitelist_Load);
             this.grpAdd.ResumeLayout(false);
             this.grpAdd.PerformLayout();
             this.ResumeLayout(false);

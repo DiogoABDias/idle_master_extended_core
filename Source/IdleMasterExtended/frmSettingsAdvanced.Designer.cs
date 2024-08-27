@@ -81,7 +81,7 @@ namespace IdleMasterExtended
             this.txtSessionID.PasswordChar = '*';
             this.txtSessionID.Size = new System.Drawing.Size(280, 20);
             this.txtSessionID.TabIndex = 3;
-            this.txtSessionID.TextChanged += new System.EventHandler(this.txtSessionID_TextChanged);
+            this.txtSessionID.TextChanged += new System.EventHandler(this.TxtSessionID_TextChanged);
             // 
             // txtSteamLoginSecure
             // 
@@ -90,7 +90,7 @@ namespace IdleMasterExtended
             this.txtSteamLoginSecure.PasswordChar = '*';
             this.txtSteamLoginSecure.Size = new System.Drawing.Size(280, 20);
             this.txtSteamLoginSecure.TabIndex = 4;
-            this.txtSteamLoginSecure.TextChanged += new System.EventHandler(this.txtSteamLogin_TextChanged);
+            this.txtSteamLoginSecure.TextChanged += new System.EventHandler(this.TxtSteamLogin_TextChanged);
             // 
             // txtSteamParental
             // 
@@ -99,7 +99,7 @@ namespace IdleMasterExtended
             this.txtSteamParental.PasswordChar = '*';
             this.txtSteamParental.Size = new System.Drawing.Size(280, 20);
             this.txtSteamParental.TabIndex = 5;
-            this.txtSteamParental.TextChanged += new System.EventHandler(this.txtSteamParental_TextChanged);
+            this.txtSteamParental.TextChanged += new System.EventHandler(this.TxtSteamParental_TextChanged);
             // 
             // btnUpdate
             // 
@@ -110,7 +110,7 @@ namespace IdleMasterExtended
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // btnView
             // 
@@ -124,7 +124,7 @@ namespace IdleMasterExtended
         "e, \r\nas it could potentially be used by an attacker to log into \r\nyour Steam acc" +
         "ount.");
             this.btnView.UseVisualStyleBackColor = true;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            this.btnView.Click += new System.EventHandler(this.BtnView_Click);
             // 
             // ttHelp
             // 
@@ -141,7 +141,7 @@ namespace IdleMasterExtended
             this.linkLabelWhatIsThis.TabIndex = 8;
             this.linkLabelWhatIsThis.TabStop = true;
             this.linkLabelWhatIsThis.Text = "What are these fields?";
-            this.linkLabelWhatIsThis.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelWhatIsThis_LinkClicked);
+            this.linkLabelWhatIsThis.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelWhatIsThis_LinkClicked);
             // 
             // frmSettingsAdvanced
             // 
@@ -164,7 +164,7 @@ namespace IdleMasterExtended
             this.Name = "frmSettingsAdvanced";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Steam Authentication Data";
-            this.Load += new System.EventHandler(this.frmSettingsAdvanced_Load);
+            this.Load += new System.EventHandler(this.FrmSettingsAdvanced_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

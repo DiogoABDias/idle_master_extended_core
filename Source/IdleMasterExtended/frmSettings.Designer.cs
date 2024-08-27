@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace IdleMasterExtended
 {
-    partial class frmSettings
+    partial class FrmSettings
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@ namespace IdleMasterExtended
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSettings));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSettings));
             this.grpGeneral = new System.Windows.Forms.GroupBox();
             this.chkIdleOnlyPlayed = new System.Windows.Forms.CheckBox();
             this.chkShutdown = new System.Windows.Forms.CheckBox();
@@ -106,7 +106,7 @@ namespace IdleMasterExtended
             this.chkShutdown.TabIndex = 31;
             this.chkShutdown.Text = "Shutdown Windows when done";
             this.chkShutdown.UseVisualStyleBackColor = true;
-            this.chkShutdown.CheckedChanged += new System.EventHandler(this.chkShutdown_CheckedChanged);
+            this.chkShutdown.CheckedChanged += new System.EventHandler(this.ChkShutdown_CheckedChanged);
             // 
             // chkPreventSleep
             // 
@@ -128,7 +128,7 @@ namespace IdleMasterExtended
             this.darkThemeCheckBox.TabIndex = 6;
             this.darkThemeCheckBox.Text = "Dark theme";
             this.darkThemeCheckBox.UseVisualStyleBackColor = true;
-            this.darkThemeCheckBox.CheckedChanged += new System.EventHandler(this.darkThemeCheckBox_CheckedChanged);
+            this.darkThemeCheckBox.CheckedChanged += new System.EventHandler(this.DarkThemeCheckBox_CheckedChanged);
             // 
             // cboLanguage
             // 
@@ -217,7 +217,7 @@ namespace IdleMasterExtended
             this.linkLabelAppData.TabIndex = 6;
             this.linkLabelAppData.TabStop = true;
             this.linkLabelAppData.Text = "Browse ApplicationData";
-            this.linkLabelAppData.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelSettings_LinkClicked);
+            this.linkLabelAppData.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelSettings_LinkClicked);
             // 
             // grpPriority
             // 
@@ -278,7 +278,7 @@ namespace IdleMasterExtended
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnOK
             // 
@@ -289,7 +289,7 @@ namespace IdleMasterExtended
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "&Accept";
             this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnOK.Click += new System.EventHandler(this.BtnOK_Click);
             // 
             // btnAdvanced
             // 
@@ -301,7 +301,7 @@ namespace IdleMasterExtended
             this.btnAdvanced.TabIndex = 4;
             this.ttHints.SetToolTip(this.btnAdvanced, "Display advanced authentication information");
             this.btnAdvanced.UseVisualStyleBackColor = true;
-            this.btnAdvanced.Click += new System.EventHandler(this.btnAdvanced_Click);
+            this.btnAdvanced.Click += new System.EventHandler(this.BtnAdvanced_Click);
             // 
             // grpIdlingQuantity
             // 
@@ -392,7 +392,7 @@ namespace IdleMasterExtended
             this.lnkGitHubWiki.TabIndex = 8;
             this.lnkGitHubWiki.TabStop = true;
             this.lnkGitHubWiki.Text = "GitHub Wiki";
-            this.lnkGitHubWiki.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGitHubWiki_LinkClicked);
+            this.lnkGitHubWiki.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkGitHubWiki_LinkClicked);
             // 
             // frmSettings
             // 
@@ -416,7 +416,7 @@ namespace IdleMasterExtended
             this.Name = "frmSettings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Idle Master Extended Settings";
-            this.Load += new System.EventHandler(this.frmSettings_Load);
+            this.Load += new System.EventHandler(this.FrmSettings_Load);
             this.grpGeneral.ResumeLayout(false);
             this.grpGeneral.PerformLayout();
             this.grpPriority.ResumeLayout(false);

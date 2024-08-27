@@ -47,7 +47,7 @@
             this.btnOK.TabIndex = 0;
             this.btnOK.Text = "&OK";
             this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnOK.Click += new System.EventHandler(this.BtnOK_Click);
             // 
             // lblSessionTime
             // 
@@ -123,7 +123,7 @@
             this.Name = "frmStatistics";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Statistics";
-            this.Load += new System.EventHandler(this.frmStatistics_Load);
+            this.Load += new System.EventHandler(this.FrmStatistics_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
